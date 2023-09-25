@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Tratamiento } from "../components/Tratamientos";
+
+const tratamientos = [
+  {
+    price: "$30",
+    title: "Limpieza facial profunda",
+    img: "/1.jpg",
+  },
+  {
+    price: "$35",
+    title: "LFP con microdermoabrasión",
+    img: "/1.jpg",
+  },
+  {
+    price: "$150",
+    title: "TTO anti-acné 5 sesiones",
+    img: "/1.jpg",
+  },
+  {
+    price: "$250",
+    title: "TTO anti-arrugas 10 sesiones",
+    img: "/1.jpg",
+  },
+  {
+    price: "$100",
+    title: "Párpados 6 sesiones, Drenaje linfático, Radiofrecuencia y Carboxi",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Drenaje facial postoperatorio",
+    img: "/1.jpg",
+  },
+];
+---
+
+<Layout title="Tratamientos Generales">
+  <div class="tratamiento flex flex-wrap justify-center m-20">
+    {
+      tratamientos.map((tratamiento) => (
+        <Tratamiento
+          price={tratamiento.price}
+          title={tratamiento.title}
+          image={tratamiento.img}
+        />
+      ))
+    }
+  </div>
+</Layout>

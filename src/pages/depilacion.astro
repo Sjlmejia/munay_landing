@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Tratamiento } from "../components/Tratamientos";
+
+const tratamientos = [
+  {
+    price: "$15 x sesion",
+    title: "Depilación bigote",
+    img: "/1.jpg",
+  },
+  {
+    price: "$25 x sesion",
+    title: "Depilación axilas",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Linea de bikini",
+    img: "/1.jpg",
+  },
+  {
+    price: "$25 x sesion",
+    title: "Full Bikini",
+    img: "/1.jpg",
+  },
+  {
+    price: "$32 x sesion",
+    title: "Brasilero",
+    img: "/1.jpg",
+  },
+  {
+    price: "$40 x sesion",
+    title: "Brazo completo",
+    img: "/1.jpg",
+  },
+  {
+    price: "$20 x sesion",
+    title: "Medio Brazo",
+    img: "/1.jpg",
+  },
+  {
+    price: "$50 a $80 x sesion",
+    title: "Espalda completa",
+    img: "/1.jpg",
+  },
+  {
+    price: "$25 a $40 x sesion",
+    title: "Media Espalda",
+    img: "/1.jpg",
+  },
+  {
+    price: "$25 a $30 x sesion",
+    title: "Abdomen",
+    img: "/1.jpg",
+  },
+  {
+    price: "$25 x sesion",
+    title: "Gluteos",
+    img: "/1.jpg",
+  },
+  {
+    price: "$80 x sesion",
+    title: "Piernas Completas",
+    img: "/1.jpg",
+  },
+  {
+    price: "$50 x sesion",
+    title: "Media Pierna",
+    img: "/1.jpg",
+  },
+  {
+    price: "$40 x sesion",
+    title: "Rostro Completo",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Frente",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Patilla",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Patilla",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Bigote",
+    img: "/1.jpg",
+  },
+  {
+    price: "$15 x sesion",
+    title: "Cuello",
+    img: "/1.jpg",
+  },
+];
+---
+
+<Layout title="Depilaciones">
+  <div class="tratamiento flex flex-wrap justify-center m-20">
+    {
+      tratamientos.map((tratamiento) => (
+        <Tratamiento
+          price={tratamiento.price}
+          title={tratamiento.title}
+          image={tratamiento.img}
+        />
+      ))
+    }
+  </div>
+</Layout>

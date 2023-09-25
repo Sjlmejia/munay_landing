@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+  <div class="tratamiento flex flex-wrap justify-center m-20">
+    <h1>Registro</h1>
+    <form method="POST">
+      <label>
+        Usuario:
+        <input type="text" name="username" required />
+      </label>
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Contraseña:
+        <input type="password" name="password" required minlength="6" />
+      </label>
+      <button>Enviar</button>
+    </form>
+  </div>
+</Layout>

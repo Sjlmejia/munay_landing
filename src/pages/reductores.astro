@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Tratamiento } from "../components/Tratamientos";
+
+const tratamientos = [
+  {
+    price: "$30",
+    title: "L masaje manual + drenaje lim + manta térmica",
+    img: "/1.jpg",
+  },
+  {
+    price: "$30",
+    title: "M masaje manual + radiofrecuencia + carboxi",
+    img: "/1.jpg",
+  },
+  {
+    price: "$30",
+    title: "V masaje manual + radiofrecuencia + carboxi",
+    img: "/1.jpg",
+  },
+  {
+    price: "$20",
+    title: "Drenaje linfático",
+    img: "/1.jpg",
+  },
+];
+---
+
+<Layout title="Reductores">
+  <div class="tratamiento flex flex-wrap justify-center m-20">
+    {
+      tratamientos.map((tratamiento) => (
+        <Tratamiento
+          price={tratamiento.price}
+          title={tratamiento.title}
+          image={tratamiento.img}
+        />
+      ))
+    }
+  </div>
+</Layout>
