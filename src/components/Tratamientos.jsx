@@ -1,11 +1,5 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import pkg from '@material-tailwind/react';
+const { Card, CardHeader, CardBody, Typography } = pkg
 import { fade } from "astro:transitions"; 
 export function Tratamiento({price, title, image}) {
   return (

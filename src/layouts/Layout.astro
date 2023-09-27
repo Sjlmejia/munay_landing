@@ -1,7 +1,9 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ThemeProvider from "../components/theme-provider";
 interface Props {
   title: string;
 }
@@ -11,15 +13,10 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
+  <BaseHead title ="Munay" description="trabajando por ti"/>
   <body class="h-screen">
+    <ThemeProvider>
+    <ViewTransitions/>
     <Header />
     <main class="px4 m-auto relative overflow-visible">
       <slot />
@@ -44,5 +41,6 @@ const { title } = Astro.props;
         }
       }
     </style>
+    </ThemeProvider>
   </body>
 </html>

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.0.2",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@material-tailwind/react": "^2.1.1",
     "@types/react": "^18.2.21",
