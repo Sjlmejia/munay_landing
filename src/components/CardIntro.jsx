@@ -1,10 +1,3 @@
-// import {
-//   Card,
-//   CardHeader,
-//   CardBody,
-//   Typography,
-//   Avatar,
-// } from "@material-tailwind/react";
 import pkg from '@material-tailwind/react';
 const { Card, CardHeader, CardBody, Typography, Avatar } = pkg;
 export function BackgroundBlogCard() {

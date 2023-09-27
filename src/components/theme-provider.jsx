@@ -1,4 +1,3 @@
-// import { ThemeProvider as MTThemeProvider } from "@material-tailwind/react";
 import pkg from '@material-tailwind/react';
 const { ThemeProvider: ThemeProvider$1 } = pkg;
 export function ThemeProvider({ children }) {
