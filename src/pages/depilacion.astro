@@ -6,97 +6,104 @@ const tratamientos = [
   {
     price: "$15 x sesion",
     title: "Depilación bigote",
-    img: "/1.jpg",
+    img: "/depilacion/de1.jpeg",
+    description: "Depilación bigote es una depilación facial que se realiza en la zona del labio superior, es decir, en la zona del bigote.",
   },
   {
     price: "$25 x sesion",
     title: "Depilación axilas",
-    img: "/1.jpg",
+    img: "/depilacion/de2.webp",
+    description: "Es una zona muy sensible y delicada, por lo que es importante que se realice con cuidado y con productos adecuados.",
   },
   {
     price: "$15 x sesion",
     title: "Linea de bikini",
-    img: "/1.jpg",
+    img: "/depilacion/d3.webp",
+    description: "La depilación de la línea del bikini es una de las más solicitadas por las mujeres, ya que es una zona muy sensible y delicada.",
   },
   {
     price: "$25 x sesion",
     title: "Full Bikini",
-    img: "/1.jpg",
+    img: "/depilacion/d3.webp",
+    description: "La depilación de la línea del bikini es una de las más solicitadas por las mujeres, ya que es una zona muy sensible y delicada.",
   },
   {
     price: "$32 x sesion",
     title: "Brasilero",
-    img: "/1.jpg",
+    img: "/depilacion/d3.webp",
+    description: "Brasilero es una depilación que se realiza en la zona del bikini.",
   },
   {
     price: "$40 x sesion",
     title: "Brazo completo",
-    img: "/1.jpg",
+    img: "/depilacion/de6.webp",
+    description: 'Brazo completo es una depilación que se realiza en la zona del brazo.'
   },
   {
     price: "$20 x sesion",
     title: "Medio Brazo",
-    img: "/1.jpg",
+    img: "/depilacion/de7.webp",
+    description: "Medio Brazo es una depilación que se realiza en la zona del brazo."
   },
   {
     price: "$50 a $80 x sesion",
     title: "Espalda completa",
-    img: "/1.jpg",
+    img: "/depilacion/d8.webp",
+    description: "Espalda completa es una depilación que se realiza en la zona de la espalda."
   },
   {
     price: "$25 a $40 x sesion",
     title: "Media Espalda",
-    img: "/1.jpg",
+    img: "/depilacion/de9.jpeg",
+    description: "Media Espalda es una depilación que se realiza en la zona de la espalda."
   },
   {
     price: "$25 a $30 x sesion",
     title: "Abdomen",
-    img: "/1.jpg",
+    img: "/depilacion/de10.jpeg",
+    description: "Abdomen es una depilación que se realiza en la zona del abdomen."
   },
   {
     price: "$25 x sesion",
     title: "Gluteos",
-    img: "/1.jpg",
+    img: "/depilacion/de11.jpeg",
+    description: "Gluteos es una depilación que se realiza en la zona de los gluteos."
   },
   {
     price: "$80 x sesion",
     title: "Piernas Completas",
-    img: "/1.jpg",
+    img: "/depilacion/de13.jpeg",
+    description: "Piernas Completas es una depilación que se realiza en la zona de las piernas."
   },
   {
     price: "$50 x sesion",
     title: "Media Pierna",
-    img: "/1.jpg",
+    img: "/depilacion/d14.webp",
+    description: "Media Pierna es una depilación que se realiza en la zona de las piernas."
   },
   {
     price: "$40 x sesion",
     title: "Rostro Completo",
-    img: "/1.jpg",
+    img: "/depilacion/de15.jpeg",
+    description: "Rostro Completo es una depilación que se realiza en la zona del rostro."
   },
   {
     price: "$15 x sesion",
     title: "Frente",
-    img: "/1.jpg",
+    img: "/depilacion/de16.jpeg",
+    description: "Frente es una depilación que se realiza en la zona de la frente."
   },
   {
     price: "$15 x sesion",
     title: "Patilla",
-    img: "/1.jpg",
-  },
-  {
-    price: "$15 x sesion",
-    title: "Patilla",
-    img: "/1.jpg",
-  },
-  {
-    price: "$15 x sesion",
-    title: "Bigote",
-    img: "/1.jpg",
+    img: "/depilacion/de17.webp",
+    description: "Patilla es una depilación que se realiza en la zona de la patilla."
   },
   {
     price: "$15 x sesion",
     title: "Cuello",
-    img: "/1.jpg",
+    img: "/depilacion/de18.webp",
+    description: "Cuello es una depilación que se realiza en la zona del cuello."
   },
 ];
 ---
@@ -109,6 +116,7 @@ const tratamientos = [
           price={tratamiento.price}
           title={tratamiento.title}
           image={tratamiento.img}
+          description={tratamiento.description}
         />
       ))
     }

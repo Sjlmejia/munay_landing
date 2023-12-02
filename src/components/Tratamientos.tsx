@@ -1,9 +1,16 @@
 import pkg from '@material-tailwind/react';
 const { Card, CardHeader, CardBody, Typography } = pkg
-import { fade } from "astro:transitions"; 
-export function Tratamiento({price, title, image}) {
+import { fade } from "astro:transitions";
+interface TratamientoProps {
+  price: string;
+  title: string;
+  image: string;
+  description?: string;
+}
+
+export function Tratamiento({price, title, image, description}: TratamientoProps) {
   return (
-    <Card className="w-96 m-5  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-11 duration-300" transition:animate={fade({ duration: '0.4s' })}>
+    <Card className="w-96 m-5  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-11 duration-300">
       <CardHeader shadow={false} floated={false} className="h-96">
         <img
           src={image}
@@ -20,14 +27,13 @@ export function Tratamiento({price, title, image}) {
             {price}
           </Typography>
         </div>
-        <Typography
-          variant="small"
-          color="gray"
-          className="font-normal opacity-75"
-        >
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
-        </Typography>
+        {
+          description && (
+            <Typography color="blue-gray" className="text-sm">
+              {description}
+            </Typography>
+          )
+        }
       </CardBody>
     </Card>
   );

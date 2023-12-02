@@ -6,17 +6,20 @@ const tratamientos = [
   {
     price: "$45",
     title: "Masaje relajante Completo",
-    img: "/1.jpg",
+    img: "/masajes/ma1.webp",
+    description: "Masaje relajante completo ",
   },
   {
     price: "$25",
     title: "Masaje relajante Parcial",
-    img: "/1.jpg",
+    img: "/masajes/ma2.jpeg",
+    description: "Masaje relajante parcial",
   },
   {
     price: "",
     title: "Paquetes de mantenimiento post-operatorio",
-    img: "/1.jpg",
+    img: "/masajes/ma3.jpeg",
+    description: "Paquetes de mantenimiento post-operatorio",
   },
 ];
 ---
@@ -29,6 +32,7 @@ const tratamientos = [
           price={tratamiento.price}
           title={tratamiento.title}
           image={tratamiento.img}
+          description={tratamiento.description}
         />
       ))
     }

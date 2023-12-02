@@ -6,32 +6,38 @@ const tratamientos = [
   {
     price: "$30",
     title: "Limpieza facial profunda",
-    img: "/1.jpg",
+    img: "/tratamientos/limpieza1.jpeg",
+    description: 'La limpieza facial profunda es un procedimiento de mantenimiento que elimina todas las impurezas que se encuentran en la piel generadas por el mismo cuerpo.'
   },
   {
     price: "$35",
     title: "LFP con microdermoabrasión",
-    img: "/1.jpg",
+    img: "/tratamientos/tra2.jpeg",
+    description: 'La microdermoabrasión es un procedimiento estético que consiste en la exfoliación de la piel para eliminar las células muertas y promover la regeneración celular.'
   },
   {
     price: "$150",
     title: "TTO anti-acné 5 sesiones",
-    img: "/1.jpg",
+    img:  "/tratamientos/tra3.png",
+    description: 'El tratamiento anti-acné es un procedimiento que se realiza para eliminar las impurezas de la piel y así evitar la aparición de acné.'
   },
   {
     price: "$250",
     title: "TTO anti-arrugas 10 sesiones",
-    img: "/1.jpg",
+    img:  "/tratamientos/tra4.webp",
+    description: 'El tratamiento anti-arrugas es un procedimiento que se realiza para eliminar las impurezas de la piel y así evitar la aparición de arrugas.'
   },
   {
     price: "$100",
     title: "Párpados 6 sesiones, Drenaje linfático, Radiofrecuencia y Carboxi",
-    img: "/1.jpg",
+    img:  "/tratamientos/tra5.webp",
+    description: 'El tratamiento de párpados es un procedimiento que se realiza para eliminar las impurezas de la piel y así evitar la aparición de arrugas.'
   },
   {
     price: "$15 x sesion",
     title: "Drenaje facial postoperatorio",
-    img: "/1.jpg",
+    img:  "/tratamientos/tra6.jpeg",
+    description: 'El drenaje facial postoperatorio es un procedimiento que se realiza para eliminar las impurezas de la piel y así evitar la aparición de arrugas.'
   },
 ];
 ---
@@ -44,6 +50,7 @@ const tratamientos = [
           price={tratamiento.price}
           title={tratamiento.title}
           image={tratamiento.img}
+          description={tratamiento.description}
         />
       ))
     }
