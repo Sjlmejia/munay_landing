@@ -1,5 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <header class="bg-pink-300 fixed top-0 z-50 w-full">
@@ -12,11 +15,11 @@ import { ViewTransitions } from "astro:transitions";
     </a>
 
     <div class="flex flex-1 items-center justify-end md:justify-between">
-      <nav aria-label="Global" class="hidden md:block">
+      <nav aria-label="Global" class="hidden md:block navbar">
         <ul class="flex items-center gap-6 text-sm">
           <li>
             <a
-              class="text-gray-500 transition hover:text-gray-500/75"
+              class={currentPath === "general" ? "active" : "link"}
               href="/general"
             >
               Tratamientos Generales
@@ -25,7 +28,7 @@ import { ViewTransitions } from "astro:transitions";
 
           <li>
             <a
-              class="text-gray-500 transition hover:text-gray-500/75"
+              class={currentPath === "depilacion" ? "active" : "link"}
               href="/depilacion"
             >
               Depilaciones
@@ -34,7 +37,7 @@ import { ViewTransitions } from "astro:transitions";
 
           <li>
             <a
-              class="text-gray-500 transition hover:text-gray-500/75"
+              class={currentPath === "reductores" ? "active" : "link"}
               href="/reductores"
             >
               Tratamientos Reductores
@@ -43,7 +46,7 @@ import { ViewTransitions } from "astro:transitions";
 
           <li>
             <a
-              class="text-gray-500 transition hover:text-gray-500/75"
+              class={currentPath === "masajes" ? "active" : "link"}
               href="/masajes"
             >
               Masajes
@@ -51,7 +54,7 @@ import { ViewTransitions } from "astro:transitions";
           </li>
           <li>
             <a
-              class="text-gray-500 transition hover:text-gray-500/75"
+              class={currentPath === "contacto" ? "active" : "link"}
               href="/contacto"
             >
               Contactanos
@@ -62,3 +65,13 @@ import { ViewTransitions } from "astro:transitions";
     </div>
   </div>
 </header>
+<style>
+  .navbar a.active {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .link{
+    @apply text-gray-500 transition hover:text-gray-500/75;
+  }
+</style>
