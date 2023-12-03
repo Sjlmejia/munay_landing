@@ -28,7 +28,7 @@ const currentPath = pathname.slice(1);
 
           <li>
             <a
-              class={currentPath === "depilacion" ? "active" : "link"}
+              class={currentPath.includes("depilacion") ? "active" : "link"}
               href="/depilacion"
             >
               Depilaciones
@@ -37,7 +37,7 @@ const currentPath = pathname.slice(1);
 
           <li>
             <a
-              class={currentPath === "reductores" ? "active" : "link"}
+              class={currentPath.includes("reductores") ? "active" : "link"}
               href="/reductores"
             >
               Tratamientos Reductores
@@ -46,7 +46,7 @@ const currentPath = pathname.slice(1);
 
           <li>
             <a
-              class={currentPath === "masajes" ? "active" : "link"}
+              class={currentPath.includes("masajes") ? "active" : "link"}
               href="/masajes"
             >
               Masajes
@@ -54,7 +54,7 @@ const currentPath = pathname.slice(1);
           </li>
           <li>
             <a
-              class={currentPath === "contacto" ? "active" : "link"}
+              class={currentPath.includes("contacto") ? "active" : "link"}
               href="/contacto"
             >
               Contactanos
