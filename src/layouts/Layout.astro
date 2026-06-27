@@ -1,46 +1,24 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import ThemeProvider from "../components/theme-provider";
+import "../styles/global.css";
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Centro de estética y SPA en Loja, Ecuador." } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-  <BaseHead title ="Munay" description="trabajando por ti"/>
-  <body class="h-screen">
-    <ThemeProvider>
-    <ViewTransitions/>
+<html lang="es">
+  <BaseHead title={title} description={description} />
+  <body class="min-h-screen bg-pink-50 text-stone-900 antialiased">
     <Header />
-    <main class="px4 m-auto relative overflow-visible">
+    <main transition:name="page-content">
       <slot />
     </main>
     <Footer />
-    <style is:global>
-      html {
-        font-family: system-ui, sans-serif;
-        background-size: 224px;
-      }
-      .tratamiento {
-        animation: fadeInAnimation ease 3s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-      }
-      @keyframes fadeInAnimation {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
-    </ThemeProvider>
   </body>
 </html>

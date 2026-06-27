@@ -2,13 +2,43 @@
 import CallToAction from '../components/CallToAction.astro';
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Contacto">
-  <div class="flex flex-wrap justify-center m-20 flex-col">
-    <h2>Interesado en algun tratamiento?</h2>
-    <div class="bg-pink-300 w-1/2">
-      <CallToAction href="mailto:munaydepyspa@gmail.com">
-        Envianos un mensaje
-      </CallToAction>
+<Layout title="Contacto | Munay Spa">
+  <section class="bg-pink-50 py-16 sm:py-24">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-pink-700">Contacto</p>
+        <h1 class="mt-3 text-4xl font-semibold tracking-tight text-stone-950 sm:text-5xl">Agenda tu próxima cita.</h1>
+        <p class="mt-5 text-base leading-8 text-stone-600">
+          Escríbenos para elegir el tratamiento adecuado, confirmar disponibilidad
+          y recibir recomendaciones antes de tu visita.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <CallToAction href="mailto:munaydepyspa@gmail.com">Enviar correo</CallToAction>
+          <a class="inline-flex items-center justify-center rounded-full border border-pink-200 bg-white px-6 py-3 text-sm font-semibold text-pink-800 transition hover:bg-pink-100 sm:px-8 sm:py-4 sm:text-base" href="https://wa.me/593985706945" target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-white p-6 shadow-xl shadow-pink-950/10 sm:p-8">
+        <h2 class="text-2xl font-semibold text-stone-950">Información</h2>
+        <div class="mt-6 grid gap-5">
+          <div class="rounded-2xl bg-pink-50 p-5">
+            <p class="text-sm font-semibold text-pink-800">Teléfonos</p>
+            <p class="mt-2 text-stone-700">098 868 8345 · 099 5703 694</p>
+          </div>
+          <div class="rounded-2xl bg-pink-50 p-5">
+            <p class="text-sm font-semibold text-pink-800">Ubicación</p>
+            <p class="mt-2 text-stone-700">Loja, Ecuador</p>
+          </div>
+          <div class="rounded-2xl bg-pink-50 p-5">
+            <p class="text-sm font-semibold text-pink-800">Redes sociales</p>
+            <div class="mt-3 flex flex-wrap gap-3">
+              <a class="font-semibold text-pink-700 hover:text-pink-900" href="https://www.instagram.com/munaydepy/" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="font-semibold text-pink-700 hover:text-pink-900" href="https://www.facebook.com/profile.php?id=61550610241250" target="_blank" rel="noreferrer">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </Layout>

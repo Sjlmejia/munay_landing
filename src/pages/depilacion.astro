@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Tratamiento } from "../components/Tratamientos";
+import TratamientoCard from "../components/TratamientoCard.astro";
 
 const tratamientos = [
   {
@@ -108,11 +108,21 @@ const tratamientos = [
 ];
 ---
 
-<Layout title="Depilaciones">
-  <div class="tratamiento flex flex-wrap justify-center m-20">
+<Layout title="Depilación | Munay Spa">
+  <section class="bg-pink-50 py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-pink-700">Depilación</p>
+        <h1 class="mt-3 text-4xl font-semibold tracking-tight text-stone-950 sm:text-5xl">Depilaciones faciales y corporales</h1>
+        <p class="mt-5 text-base leading-8 text-stone-600">Opciones para diferentes zonas, con técnica cuidadosa y recomendaciones claras para antes y después de cada sesión.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white py-12 sm:py-16">
+    <div class="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 xl:grid-cols-4 lg:px-8">
     {
       tratamientos.map((tratamiento) => (
-        <Tratamiento
+        <TratamientoCard
           price={tratamiento.price}
           title={tratamiento.title}
           image={tratamiento.img}
@@ -120,5 +130,6 @@ const tratamientos = [
         />
       ))
     }
-  </div>
+    </div>
+  </section>
 </Layout>
