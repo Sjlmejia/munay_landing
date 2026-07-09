@@ -1,0 +1,38 @@
+---
+interface Props {
+  price: string;
+  title: string;
+  image: string;
+  description?: string;
+}
+
+const { price, title, image, description } = Astro.props;
+---
+
+<article class="group overflow-hidden rounded-2xl border border-pink-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-900/10">
+  <div class="aspect-[4/3] overflow-hidden bg-pink-100">
+    <img
+      src={image}
+      alt={title}
+      loading="lazy"
+      class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+    />
+  </div>
+  <div class="flex h-full flex-col gap-4 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <h2 class="text-lg font-semibold leading-tight text-stone-900">{title}</h2>
+      {
+        price && (
+          <p class="shrink-0 rounded-full bg-pink-50 px-3 py-1 text-sm font-semibold text-pink-700">
+            {price}
+          </p>
+        )
+      }
+    </div>
+    {
+      description && (
+        <p class="text-sm leading-6 text-stone-600">{description}</p>
+      )
+    }
+  </div>
+</article>
